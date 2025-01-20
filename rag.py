@@ -7,7 +7,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-llm = GoogleGenerativeAI(model="gemini-1.5-flash", api_key= os.getenv("GoogleAPIKey"))
+llm = GoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=os.getenv("GoogleAPIKey"))
 
 memory = ConversationBufferWindowMemory(k=5)
 
